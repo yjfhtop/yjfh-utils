@@ -1,7 +1,17 @@
+// 打印, 日志
 // @ts-ignore
 const IS_DEV = '__NODE_ENV__' === 'development';
 // 库名称
-const LibName = '__LIB_NAME__';
+// const LibName = '__LIB_NAME__';
+let LibName = '';
+
+/**
+ * 用于设置 库名称, 本方法在 库 模式下有用
+ * @param name
+ */
+export function setLibName(name: string) {
+    LibName = name;
+}
 
 /**
  * 打印警告
