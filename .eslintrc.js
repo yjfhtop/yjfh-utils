@@ -11,6 +11,11 @@ module.exports = {
         sourceType: 'module',
     },
     plugins: ['@typescript-eslint'],
+    settings: {
+        'import/resolver': {
+            typescript: {},
+        },
+    },
     rules: {
         indent: [
             2,
@@ -20,6 +25,18 @@ module.exports = {
             },
         ],
         'import/prefer-default-export': 1,
+        'import/extensions': [
+            // 这个是解决不写后缀报错的问题
+            'error',
+            'ignorePackages',
+            {
+                js: 'never',
+                jsx: 'never',
+                ts: 'never',
+                tsx: 'never',
+                json: 'never',
+            },
+        ],
     },
 };
 // module.exports = {
