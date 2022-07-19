@@ -82,3 +82,21 @@ export function dynamicLoadScript(
         };
     }
 }
+
+/**
+ * 防抖
+ * @param cb 需要被防抖的方法
+ * @param wait
+ */
+export function debounce(cb: (...ang: any[]) => any, wait = 1000) {
+    let timer: any = null;
+
+    return (...args: any[]) => {
+        if (timer) clearTimeout(timer);
+
+        timer = setTimeout(() => {
+            timer = null;
+            cb(...args);
+        }, wait);
+    };
+}

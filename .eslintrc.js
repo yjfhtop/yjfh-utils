@@ -37,6 +37,9 @@ module.exports = {
                 json: 'never',
             },
         ],
+        'no-plusplus': 1,
+        'no-unused-vars': 'off',
+        '@typescript-eslint/no-unused-vars': 'error',
     },
 };
 // module.exports = {

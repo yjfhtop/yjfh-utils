@@ -11,9 +11,11 @@ import alias from '@rollup/plugin-alias';
 
 // 用于替换字符串， 用于环境变量
 import replace from '@rollup/plugin-replace';
+// eslint-disable-next-line import/extensions
 import pkg from './package.json';
 
 const path = require('path');
+// eslint-disable-next-line import/extensions
 const packageJson = require('./package.json');
 
 export const LibName = 'yjfhUtils';

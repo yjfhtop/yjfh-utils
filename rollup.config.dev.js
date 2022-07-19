@@ -1,5 +1,5 @@
 import serve from 'rollup-plugin-serve';
-import rollupConfig, { resolveFile } from './rollup.config';
+import rollupConfig from './rollup.config';
 
 // 本地服务
 
